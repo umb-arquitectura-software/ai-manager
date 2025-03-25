@@ -7,7 +7,7 @@ export class AiController {
   constructor(private readonly aiGcpService: AiGcpService) {}
 
 
-  @Post("generateContent")
+  @Post("generate-content")
   async generateContent(@Body() body: GenerateContent) {
     return await this.aiGcpService.generateContent(body);
   }

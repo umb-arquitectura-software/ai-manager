@@ -1,7 +1,7 @@
 export interface GenerateContent {
   contents: Content[];
   systemInstruction: string | Part | Content;
-  model: 'gemini-1.5-pro';
+  model: 'gemini-1.5-pro' | 'gemini-1.5-flash';
 }
 
 export declare interface Content {
