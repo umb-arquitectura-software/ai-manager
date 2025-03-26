@@ -18,6 +18,9 @@ export class AiGcpService implements AiService {
     const generatedContent = await model.generateContent({
       contents: body.contents,
       systemInstruction: body.systemInstruction,
+      generationConfig: {
+        responseMimeType: 'application/json',
+      }
     });
 
     return { data: generatedContent.response.text() }
